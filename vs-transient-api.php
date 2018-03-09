@@ -1,3 +1,13 @@
+<?php
+/**
+ * Name: VS Transient
+ * Version: 1.1
+ * Created by PhpStorm.
+ * User: varun
+ * Date: 28-02-2018
+ * Time: 03:50 PM
+ */
+
 abstract class VS_Transient_WP_Api {
     protected $is_option             = FALSE;
     protected $transient_limit       = 170;
@@ -96,6 +106,37 @@ abstract class VS_Transient_WP_Api {
 
 abstract class VS_Transient_Api extends VS_Transient_WP_Api {
 
+    public function force_set($key = '', $value = '', $expiry = '') {
+        if( $this->is_option === TRUE ) {
+            return $this->update_option($key, $value, $expiry);
+        }
+        $this->delete_transient($key);
+        return $this->set_transient($key, $value, $expiry);
+    }
+
+    public function update_option($key, $value, $status = '') {
+        $key         = $this->key($key, TRUE);
+        $version_key = $this->get_version_key($key);
+        $_status     = $this->wp_update_option($key, $value, $status);
+        $this->wp_update_option($version_key, $this->option_version, $status);
+        return $_status;
+    }
+
+    public function delete_transient($_key) {
+        $key         = $this->key($_key, FALSE);
+        $version_key = $this->get_version_key($key);
+        $this->wp_delete_transient($key);
+        $this->wp_delete_transient($version_key);
+    }
+
+    public function set_transient($_key, $value, $expiry = 0) {
+        $key         = $this->key($_key, FALSE);
+        $version_key = $this->get_version_key($key);
+        $_status     = $this->wp_set_transient($key, $value, $expiry);
+        $this->wp_set_transient($version_key, $this->option_version, $expiry);
+        return $_status;
+    }
+
     public function set($key = '', $value = '', $expiry = '') {
         if( $this->is_option === TRUE ) {
             return $this->set_option($key, $value, $expiry);
@@ -111,15 +152,6 @@ abstract class VS_Transient_Api extends VS_Transient_WP_Api {
         $this->wp_add_option($version_key, $this->option_version, $status);
         return $_status;
     }
-
-    public function set_transient($_key, $value, $expiry = 0) {
-        $key         = $this->key($_key, FALSE);
-        $version_key = $this->get_version_key($key);
-        $_status     = $this->wp_set_transient($key, $value, $expiry);
-        $this->wp_set_transient($version_key, $this->option_version, $expiry);
-        return $_status;
-    }
-
 
     public function get($key = '') {
         if( $this->is_option === TRUE ) {
@@ -152,7 +184,6 @@ abstract class VS_Transient_Api extends VS_Transient_WP_Api {
         return $this->wp_get_transient($key);
     }
 
-
     public function delete($key) {
         if( $this->is_option === TRUE ) {
             return $this->delete_option($key);
@@ -167,26 +198,10 @@ abstract class VS_Transient_Api extends VS_Transient_WP_Api {
         $this->wp_delete_option($version_key);
     }
 
-    public function delete_transient($_key) {
-        $key         = $this->key($_key, FALSE);
-        $version_key = $this->get_version_key($key);
-        $this->wp_delete_transient($key);
-        $this->wp_delete_transient($version_key);
-    }
-
-
     public function update($key, $value = '', $expiry = '') {
         if( $this->is_option ) {
             return $this->update_option($key, $value, $expiry);
         }
-    }
-
-    public function update_option($key, $value, $status = '') {
-        $key         = $this->key($key, TRUE);
-        $version_key = $this->get_version_key($key);
-        $_status     = $this->wp_update_option($key, $value, $status);
-        $this->wp_update_option($version_key, $this->option_version, $status);
-        return $_status;
     }
 
 }
