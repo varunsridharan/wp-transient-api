@@ -1,23 +1,27 @@
 <?php
 /**
- * @name: VS Transient
- * @version: 1.1
- * Created by PhpStorm.
- * User: varun
- * Date: 28-02-2018
- * Time: 03:50 PM
+ * WordPress Transient API
+ * This library provides developers to manage all their Transients with version management.
  *
  * @author    Varun Sridharan <varunsridharan23@gmail.com>
- * @package   vs-wp-libs
  * @copyright 2018 Varun Sridharan
  * @license   GPLV3 Or Greater
  */
 
-/**
- * Class VS_Transient_WP_Api
- */
-abstract class VS_Transient_WP_Api {
+namespace Varunsridharan;
 
+if ( ! defined( 'WPINC' ) ) {
+	die;
+}
+
+/**
+ * Class Transient_WP_Api
+ *
+ * @package Varunsridharan
+ * @author Varun Sridharan <varunsridharan23@gmail.com>
+ * @since 1.0
+ */
+abstract class Transient_WP_Api {
 	/**
 	 * is_option
 	 *
@@ -172,7 +176,7 @@ abstract class VS_Transient_WP_Api {
 	 * @return bool
 	 */
 	protected function wp_add_option( $key = '', $value = '', $autoload = 'no' ) {
-		return add_option( $key, $value, '', $autoload );
+		return \add_option( $key, $value, '', $autoload );
 	}
 
 	/**
@@ -187,7 +191,7 @@ abstract class VS_Transient_WP_Api {
 	 * @return bool
 	 */
 	protected function wp_update_option( $key = '', $value = '', $autoload = 'no' ) {
-		return update_option( $key, $value, $autoload );
+		return \update_option( $key, $value, $autoload );
 	}
 
 	/**
@@ -200,7 +204,7 @@ abstract class VS_Transient_WP_Api {
 	 * @return bool
 	 */
 	protected function wp_delete_option( $key = '' ) {
-		return delete_option( $key );
+		return \delete_option( $key );
 	}
 
 	/**
@@ -214,7 +218,7 @@ abstract class VS_Transient_WP_Api {
 	 * @return mixed|void
 	 */
 	protected function wp_get_option( $key = '', $default = false ) {
-		return get_option( $key, $default );
+		return \get_option( $key, $default );
 	}
 
 	/**
@@ -229,7 +233,7 @@ abstract class VS_Transient_WP_Api {
 	 * @return bool
 	 */
 	protected function wp_set_transient( $transient, $value, $expiration = 0 ) {
-		return set_transient( $transient, $value, $expiration );
+		return \set_transient( $transient, $value, $expiration );
 	}
 
 	/**
@@ -242,7 +246,7 @@ abstract class VS_Transient_WP_Api {
 	 * @return mixed
 	 */
 	protected function wp_get_transient( $transient ) {
-		return get_transient( $transient );
+		return \get_transient( $transient );
 	}
 
 	/**
@@ -255,7 +259,7 @@ abstract class VS_Transient_WP_Api {
 	 * @return bool
 	 */
 	protected function wp_delete_transient( $transient ) {
-		return delete_transient( $transient );
+		return \delete_transient( $transient );
 	}
 
 	/**
@@ -291,30 +295,16 @@ abstract class VS_Transient_WP_Api {
 
 		return version_compare( $this->transient_version, $value, '=' );
 	}
-
-	/**
-	 * Deletes if cache has any issues.
-	 *
-	 * @param        $key
-	 * @param string $type
-	 *
-	 * @return mixed
-	 */
-	protected function delete_version_issue( $key, $type = '' ) {
-		if ( true === $this->option_auto_delete && 'option' === $type ) {
-			$this->delete_option( $key );
-		}
-
-		if ( true === $this->transient_auto_delete ) {
-			return $this->delete_transient( $key );
-		}
-	}
 }
 
 /**
- * Class VS_Transient_Api
+ * Class Transient_Api
+ *
+ * @package Varunsridharan
+ * @author Varun Sridharan <varunsridharan23@gmail.com>
+ * @since 1.0
  */
-abstract class VS_Transient_Api extends VS_Transient_WP_Api {
+abstract class Transient_Api extends Transient_WP_Api {
 	/**
 	 * _instances
 	 *
@@ -323,8 +313,10 @@ abstract class VS_Transient_Api extends VS_Transient_WP_Api {
 	protected static $_instances = array();
 
 	/**
-	 * @return mixed
+	 * Creates & Returns A Static Instance.
+	 *
 	 * @static
+	 * @return \Varunsridharan\Transient_Api
 	 */
 	public static function instance() {
 		if ( ! isset( self::$_instances[ static::class ] ) ) {
@@ -495,6 +487,25 @@ abstract class VS_Transient_Api extends VS_Transient_WP_Api {
 		if ( $this->is_option ) {
 			return $this->update_option( $key, $value, $expiry );
 		}
+		return true;
 	}
 
+	/**
+	 * Deletes if cache has any issues.
+	 *
+	 * @param        $key
+	 * @param string $type
+	 *
+	 * @return mixed
+	 */
+	protected function delete_version_issue( $key, $type = '' ) {
+		if ( true === $this->option_auto_delete && 'option' === $type ) {
+			$this->delete_option( $key );
+		}
+
+		if ( true === $this->transient_auto_delete ) {
+			return $this->delete_transient( $key );
+		}
+		return false;
+	}
 }

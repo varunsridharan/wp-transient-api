@@ -1,0 +1,35 @@
+{
+  "name"        : "varunsridharan/wp-transient-api",
+  "description" : "Provides Option to store Transient / options with version management.",
+  "type"        : "library",
+  "license"     : "GPL-3.0-or-later",
+  "keywords"    : [
+	"transients",
+	"wordpress",
+	"wordpress-library",
+	"wordpress-plugin-library",
+	"wordpress-development",
+	"wordpress-theme",
+	"wordpress-plugin",
+	"wordpress-plugins",
+	"wordpress-transients",
+	"transient-handler",
+	"wordpress-cache",
+	"wordpress-data",
+	"wordpress-php-library",
+	"wordpress-plugin-development",
+	"vsp-libs",
+	"wp-plugin",
+	"wp-theme",
+	"wp-library"
+  ],
+  "authors"     : [
+	{
+	  "name"     : "Varun",
+	  "email"    : "varunsridharan23@gmail.com",
+	  "homepage" : "https://varunsridharan.in",
+	  "role"     : "Developer"
+	}
+  ],
+  "require"     : { }
+}
