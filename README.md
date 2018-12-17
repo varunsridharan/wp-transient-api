@@ -42,7 +42,7 @@ Or **install it manually**:
 ## Usage 
 
 ```php
-class YourPlugin_Transient_Api extends VS_Transient_Api {
+class YourPlugin_Transient_Api extends Varunsridharan\WordPress\Transient_API {
     protected static $_instance             = NULL;
     
     protected        $is_option             = FALSE;
