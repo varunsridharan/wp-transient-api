@@ -8,7 +8,7 @@
  * @license   GPLV3 Or Greater
  */
 
-namespace Varunsridharan;
+namespace Varunsridharan\WordPress;
 
 if ( ! defined( 'WPINC' ) ) {
 	die;
@@ -17,7 +17,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Class Transient_WP_Api
  *
- * @package Varunsridharan
+ * @package Varunsridharan\WordPress
  * @author Varun Sridharan <varunsridharan23@gmail.com>
  * @since 1.0
  */
@@ -300,7 +300,7 @@ abstract class Transient_WP_Api {
 /**
  * Class Transient_Api
  *
- * @package Varunsridharan
+ * @package Varunsridharan\WordPress
  * @author Varun Sridharan <varunsridharan23@gmail.com>
  * @since 1.0
  */
@@ -316,7 +316,7 @@ abstract class Transient_Api extends Transient_WP_Api {
 	 * Creates & Returns A Static Instance.
 	 *
 	 * @static
-	 * @return \Varunsridharan\Transient_Api
+	 * @return \Varunsridharan\WordPress\Transient_Api
 	 */
 	public static function instance() {
 		if ( ! isset( self::$_instances[ static::class ] ) ) {

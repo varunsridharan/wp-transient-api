@@ -1,7 +1,30 @@
 # WordPress Transient API
 This library provides developers to manage all their Transients with version management. 
 
-### Options
+
+## Installation
+The preferred way to install this extension is through [Composer](http://getcomposer.org/download/).
+
+To install **WP_Transient_API library**, simply:
+
+    $ composer require Varunsridharan/WP_Transient_API
+
+The previous command will only install the necessary files, if you prefer to **download the entire source code** you can use:
+
+    $ composer require Varunsridharan/WP_Transient_API --prefer-source
+
+You can also **clone the complete repository** with Git:
+
+    $ git clone https://github.com/varunsridharan/wp-transient-api.git
+
+Or **install it manually**:
+
+[Download WP_Transient_API.php](https://raw.githubusercontent.com/varunsridharan/wp-transient-api/master/class-transient-wp-api.php):
+
+    $ wget https://raw.githubusercontent.com/varunsridharan/wp-transient-api/master/class-transient-wp-api.php
+
+
+## Options
 | Option | Notes |
 | ------ | ----- |
 | ***WP Options API*** ||
@@ -16,7 +39,7 @@ This library provides developers to manage all their Transients with version man
 | `transient_auto_delete` | if set to true then it auto deletes if the version dose not match|
 
 
-### Usage 
+## Usage 
 
 ```php
 class YourPlugin_Transient_Api extends VS_Transient_Api {
@@ -46,7 +69,7 @@ YourPlugin_Transient_Api::instance();
 
 ```
 
-### Global Based On Class Settings 
+## Global Based On Class Settings 
 **Note** : `update only works for if class set to wp options api` 
 ```php
 YourPlugin_Transient_Api::instance()->set('your-key','your-value');
@@ -57,7 +80,7 @@ YourPlugin_Transient_Api::instance()->delete('your-key'); # Deletes the options 
 
 
 
-### WP Options API With Version Management
+## WP Options API With Version Management
 ```php
 YourPlugin_Transient_Api::instance()->add_option('your-key','your-value');
 YourPlugin_Transient_Api::instance()->get_option('your-key'); # Returns the values only if option version matched with $option_version
@@ -66,7 +89,7 @@ YourPlugin_Transient_Api::instance()->delete_option('your-key'); # Deletes the o
 ```
 
 
-### WP Transient API With Version Management
+## WP Transient API With Version Management
 ```php
 YourPlugin_Transient_Api::instance()->add_transient('your-key','your-value',2000);
 YourPlugin_Transient_Api::instance()->get_transient('your-key'); # Returns the values only if option version matched with $transient_version
