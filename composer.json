@@ -23,6 +23,11 @@
 	"wp-theme",
 	"wp-library"
   ],
+  "autoload"    : {
+	"files" : [
+	  "./class-transient-wp-api.php"
+	]
+  },
   "authors"     : [
 	{
 	  "name"     : "Varun",
