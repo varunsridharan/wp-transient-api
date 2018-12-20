@@ -24,9 +24,9 @@
 	"wp-library"
   ],
   "autoload"    : {
-	"files" : [
-	  "./class-transient-wp-api.php"
-	]
+	"psr-4" : {
+	  "Varunsridharan\\WordPress\\" : "./src"
+	}
   },
   "authors"     : [
 	{
