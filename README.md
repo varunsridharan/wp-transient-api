@@ -96,3 +96,7 @@ YourPlugin_Transient_Api::instance()->get_transient('your-key'); # Returns the v
 YourPlugin_Transient_Api::instance()->delete_transient('your-key'); # Deletes the options and its releated options 
 ```
 
+
+---
+## Sponsored By
+[![DigitalOcean](https://vsp.ams3.cdn.digitaloceanspaces.com/cdn/DO_Logo_Horizontal_Blue.png)](https://s.svarun.in/Ef)
