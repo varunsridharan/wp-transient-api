@@ -1,6 +1,12 @@
 # WordPress Transient API
 This library provides developers to manage all their Transients with version management. 
 
+[![Latest Stable Version](https://poser.pugx.org/varunsridharan/wp-transient-api/version)](https://packagist.org/packages/varunsridharan/wp-transient-api)
+[![Total Downloads](https://poser.pugx.org/varunsridharan/wp-transient-api/downloads)](https://packagist.org/packages/varunsridharan/wp-transient-api)
+[![Latest Unstable Version](https://poser.pugx.org/varunsridharan/wp-transient-api/v/unstable)](//packagist.org/packages/varunsridharan/wp-transient-api)
+[![License](https://poser.pugx.org/varunsridharan/wp-transient-api/license)](https://packagist.org/packages/varunsridharan/wp-transient-api)
+[![composer.lock available](https://poser.pugx.org/varunsridharan/wp-transient-api/composerlock)](https://packagist.org/packages/varunsridharan/wp-transient-api)
+
 
 ## Installation
 The preferred way to install this extension is through [Composer](http://getcomposer.org/download/).
@@ -99,4 +105,4 @@ YourPlugin_Transient_Api::instance()->delete_transient('your-key'); # Deletes th
 
 ---
 ## Sponsored By
-[![DigitalOcean](https://vsp.ams3.cdn.digitaloceanspaces.com/cdn/DO_Logo_Horizontal_Blue.png)](https://s.svarun.in/Ef)
+[![DigitalOcean](https://vsp.ams3.cdn.digitaloceanspaces.com/cdn/DO_Logo_Horizontal_Blue-small.png)](https://s.svarun.in/Ef)  [![JetBrains](https://vsp.ams3.cdn.digitaloceanspaces.com/cdn/phpstorm-small.png?v3)](https://www.jetbrains.com)
