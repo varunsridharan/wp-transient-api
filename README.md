@@ -48,29 +48,20 @@ Or **install it manually**:
 ## Usage 
 
 ```php
-class YourPlugin_Transient_Api extends Varunsridharan\WordPress\Transient_API {
-    protected static $_instance             = NULL;
-    
-    protected        $is_option             = FALSE;
-    protected        $option_prefix         = '';
-    protected        $option_surfix         = '';
-    protected        $option_version        = 1.0;
-    
-    protected        $transient_prefix      = '';
-    protected        $transient_surfix      = '';
-    protected        $transient_version     = 1.0;
-    
-    protected        $option_auto_delete    = FALSE;
-    protected        $transient_auto_delete = FALSE;
-
-    public static function instance() {
-        if( self::$_instance === NULL ) {
-            self::$_instance = new self;
-        }
-        return self::$_instance;
-    }
-}
-
+$api = new Varunsridharan\WordPress\Transient_API::instance('instance_key',array(
+    // Transients
+    'transient_version'     => 1.0,
+    'transient_auto_delete' => false,
+    'transient_surfix'      => '',
+    'transient_prefix'      => '',
+    // WP DB Options
+    'option_auto_delete'    => false,
+    'option_version'        => 1.0,
+    'option_surfix'         => '',
+    'option_prefix'         => '',
+    // Global Config.
+    'is_option'             => false,
+));
 YourPlugin_Transient_Api::instance();
 
 ```
@@ -78,31 +69,78 @@ YourPlugin_Transient_Api::instance();
 ## Global Based On Class Settings 
 **Note** : `update only works for if class set to wp options api` 
 ```php
-YourPlugin_Transient_Api::instance()->set('your-key','your-value');
-YourPlugin_Transient_Api::instance()->get('your-key'); # Returns the values only if option version matched with $option_version
-YourPlugin_Transient_Api::instance()->update('your-key','your-value'); # Updates the options value
-YourPlugin_Transient_Api::instance()->delete('your-key'); # Deletes the options and its releated options 
+YourPlugin_Transient_Api::instance('instance_key')->set('your-key','your-value');
+YourPlugin_Transient_Api::instance('instance_key')->get('your-key'); # Returns the values only if option version matched with $option_version
+YourPlugin_Transient_Api::instance('instance_key')->update('your-key','your-value'); # Updates the options value
+YourPlugin_Transient_Api::instance('instance_key')->delete('your-key'); # Deletes the options and its releated options 
 ```
 
 
 
 ## WP Options API With Version Management
 ```php
-YourPlugin_Transient_Api::instance()->add_option('your-key','your-value');
-YourPlugin_Transient_Api::instance()->get_option('your-key'); # Returns the values only if option version matched with $option_version
-YourPlugin_Transient_Api::instance()->update_option('your-key','your-value'); # Updates the options value
-YourPlugin_Transient_Api::instance()->delete_option('your-key'); # Deletes the options and its releated options 
+YourPlugin_Transient_Api::instance('instance_key')->add_option('your-key','your-value');
+YourPlugin_Transient_Api::instance('instance_key')->get_option('your-key'); # Returns the values only if option version matched with $option_version
+YourPlugin_Transient_Api::instance('instance_key')->update_option('your-key','your-value'); # Updates the options value
+YourPlugin_Transient_Api::instance('instance_key')->delete_option('your-key'); # Deletes the options and its releated options 
 ```
 
 
 ## WP Transient API With Version Management
 ```php
-YourPlugin_Transient_Api::instance()->add_transient('your-key','your-value',2000);
-YourPlugin_Transient_Api::instance()->get_transient('your-key'); # Returns the values only if option version matched with $transient_version
-YourPlugin_Transient_Api::instance()->delete_transient('your-key'); # Deletes the options and its releated options 
+YourPlugin_Transient_Api::instance('instance_key')->add_transient('your-key','your-value',2000);
+YourPlugin_Transient_Api::instance('instance_key')->get_transient('your-key'); # Returns the values only if option version matched with $transient_version
+YourPlugin_Transient_Api::instance('instance_key')->delete_transient('your-key'); # Deletes the options and its releated options 
 ```
 
 
+
 ---
-## Sponsored By
-[![DigitalOcean](https://vsp.ams3.cdn.digitaloceanspaces.com/cdn/DO_Logo_Horizontal_Blue-small.png)](https://s.svarun.in/Ef)  [![JetBrains](https://vsp.ams3.cdn.digitaloceanspaces.com/cdn/phpstorm-small.png?v3)](https://www.jetbrains.com)
+
+## Contribute
+If you would like to help, please take a look at the list of
+[issues][issues] or the [To Do](#-todo) checklist.
+
+## License
+This project is licensed under **General Public License v3.0 license**. See the [LICENSE](LICENSE) file for more info.
+
+## Copyright
+2017 - 2018 Varun Sridharan, [varunsridharan.in][website]
+
+If you find it useful, let me know :wink:
+
+You can contact me on [Twitter][twitter] or through my [email][email].
+
+## Backed By
+| [![DigitalOcean][do-image]][do-ref] | [![JetBrains][jb-image]][jb-ref] |  [![Tidio Chat][tidio-image]][tidio-ref] |
+| --- | --- | --- |
+
+[twitter]: https://twitter.com/varunsridharan2
+[email]: mailto:varunsridharan23@gmail.com
+[website]: https://varunsridharan.in
+[issues]: issues/
+[composer]: http://getcomposer.org/download/
+[downloadzip]:https://github.com/varunsridharan/wp-transient-api/archive/master.zip
+
+[do-image]: https://vsp.ams3.cdn.digitaloceanspaces.com/cdn/DO_Logo_Horizontal_Blue-small.png
+[jb-image]: https://vsp.ams3.cdn.digitaloceanspaces.com/cdn/phpstorm-small.png?v3
+[tidio-image]: https://vsp.ams3.cdn.digitaloceanspaces.com/cdn/tidiochat-small.png
+[do-ref]: https://s.svarun.in/Ef
+[jb-ref]: https://www.jetbrains.com
+[tidio-ref]: https://tidiochat.com
+
+[latest-stable-version-img]: https://poser.pugx.org/varunsridharan/wp-transient-api/version
+[latest-Unstable-version-img]: https://poser.pugx.org/varunsridharan/wp-transient-api/v/unstable
+[total-downloads-img]: https://poser.pugx.org/varunsridharan/wp-transient-api/downloads
+[Latest-Unstable-version-img]: https://poser.pugx.org/varunsridharan/wp-transient-api/v/unstable
+[wpcs-img]: https://img.shields.io/badge/WordPress-Standar-1abc9c.svg
+[license-img]: https://poser.pugx.org/varunsridharan/wp-transient-api/license
+[composerlock-img]: https://poser.pugx.org/varunsridharan/wp-transient-api/composerlock
+
+[latest-stable-version-link]: https://packagist.org/packages/varunsridharan/wp-transient-api
+[latest-Unstable-version-link]: https://packagist.org/packages/varunsridharan/wp-transient-api
+[total-downloads-link]: https://packagist.org/packages/varunsridharan/wp-transient-api
+[Latest-Unstable-Version-link]: https://packagist.org/packages/varunsridharan/wp-transient-api
+[wpcs-link]: https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/
+[license-link]: https://packagist.org/packages/varunsridharan/wp-transient-api
+[composerlock-link]: https://packagist.org/packages/varunsridharan/wp-transient-api
