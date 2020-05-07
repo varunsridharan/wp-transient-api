@@ -40,7 +40,6 @@
 			<h3>Classes</h3>
 			<ul>
 				<li class="active"><a href="class-Varunsridharan.WordPress.Transient_Api.html">Transient_Api</a></li>
-				<li><a href="class-Varunsridharan.WordPress.Transient_WP_Api.html">Transient_WP_Api</a></li>
 			</ul>
 
 
@@ -83,23 +82,9 @@
 
 
 	<div class="description">
-	<p>Class Transient_Api</p>
+	<p>Class Transient_WP_Api</p>
 	</div>
 
-	<dl class="tree">
-		<dd style="padding-left:0px">
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html"><span>Varunsridharan\WordPress\Transient_WP_Api</span></a>
-			
-			
-			
-		</dd>
-		<dd style="padding-left:30px">
-			<img src="resources/inherit.png" alt="Extended by">
-<b><span>Varunsridharan\WordPress\Transient_Api</span></b>			
-			
-			
-		</dd>
-	</dl>
 
 
 
@@ -109,7 +94,7 @@
 
 
 	<div class="info">
-		<b>Abstract</b><br>
+		
 		
 		<b>Namespace:</b> <a href="namespace-Varunsridharan.html">Varunsridharan</a>\<a href="namespace-Varunsridharan.WordPress.html">WordPress</a><br>
 		<b>Package:</b> Varunsridharan\WordPress<br>
@@ -118,7 +103,7 @@
 				Varun Sridharan <a href="&#109;&#x61;i&#108;&#x74;&#111;&#58;&#x76;&#97;&#114;&#x75;&#110;&#115;&#x72;&#105;&#x64;&#x68;&#97;&#x72;&#x61;&#110;&#x32;3&#64;&#x67;&#109;&#97;&#x69;&#108;&#46;&#x63;&#111;&#109;">&#x76;&#97;&#114;&#x75;&#110;&#115;&#x72;&#105;&#x64;&#x68;&#97;&#x72;&#x61;&#110;&#x32;3&#64;&#x67;&#109;&#97;&#x69;&#108;&#46;&#x63;&#111;&#109;</a><br>
 				<b>Since:</b>
 				1.0<br>
-			<b>Located at</b> <a href="source-class-Varunsridharan.WordPress.Transient_Api.html#300-511" title="Go to source code">class-transient-wp-api.php</a>
+			<b>Located at</b> <a href="source-class-Varunsridharan.WordPress.Transient_Api.html#18-434" title="Go to source code">src/Transient_Api.php</a>
 		<br>
 	</div>
 
@@ -126,6 +111,613 @@
 
 	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#41-61" title="Go to source code">__construct</a>( <span>array <var>$options</var> = <span class="php-keyword1">array</span>() </span> )</code>
+
+		<div class="description short">
+			<p>Transient_Api constructor.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Transient_Api constructor.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$options</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="option" id="_option">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean|mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_option">#</a>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#63-71" title="Go to source code">option</a>( <span> <var>$key</var></span>, <span>boolean <var>$default</var> = <span class="php-keyword1">false</span> </span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+					<dt><var>$default</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean|mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="key" id="_key">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_key">#</a>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#73-83" title="Go to source code">key</a>( <span>string <var>$key</var> = <span class="php-quote">''</span></span>, <span>boolean <var>$is_option</var> = <span class="php-keyword1">false</span> </span> )</code>
+
+		<div class="description short">
+			<p>Returns a Unique Key.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns a Unique Key.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+					<dt><var>$is_option</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_key" id="_get_key">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_key">#</a>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#85-99" title="Go to source code">get_key</a>( <span>string <var>$key</var> = <span class="php-quote">''</span></span>, <span>boolean <var>$is_option</var> = <span class="php-keyword1">false</span> </span> )</code>
+
+		<div class="description short">
+			<p>Returns Key Based on Requirement.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns Key Based on Requirement.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+					<dt><var>$is_option</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_length" id="_validate_length">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_length">#</a>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#101-110" title="Go to source code">validate_length</a>( <span>string <var>$key</var> = <span class="php-quote">''</span> </span> )</code>
+
+		<div class="description short">
+			<p>Validates Key Length if key lenght exceeds it will md5 or returns the orginal key</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Validates Key Length if key lenght exceeds it will md5 or returns the orginal key</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="check_length" id="_check_length">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_check_length">#</a>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#112-127" title="Go to source code">check_length</a>( <span>string <var>$key</var> = <span class="php-quote">''</span> </span> )</code>
+
+		<div class="description short">
+			<p>Returns if key is in correct length
+if Type set to option then it uses $this->option_limit for char limit
+or uses $this->transient_limit for char limit</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns if key is in correct length
+if Type set to option then it uses $this->option_limit for char limit
+or uses $this->transient_limit for char limit</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="wp_add_option" id="_wp_add_option">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_wp_add_option">#</a>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#129-140" title="Go to source code">wp_add_option</a>( <span>string <var>$key</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$value</var> = <span class="php-quote">''</span></span>, <span>string <var>$autoload</var> = <span class="php-quote">'no'</span> </span> )</code>
+
+		<div class="description short">
+			<p>Adds Given value to db using add_option</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Adds Given value to db using add_option</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+					<dt><var>$autoload</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="wp_update_option" id="_wp_update_option">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_wp_update_option">#</a>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#142-153" title="Go to source code">wp_update_option</a>( <span>string <var>$key</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$value</var> = <span class="php-quote">''</span></span>, <span>string <var>$autoload</var> = <span class="php-quote">'no'</span> </span> )</code>
+
+		<div class="description short">
+			<p>Updates Given value to db using update_option</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Updates Given value to db using update_option</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+					<dt><var>$autoload</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="wp_delete_option" id="_wp_delete_option">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_wp_delete_option">#</a>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#155-164" title="Go to source code">wp_delete_option</a>( <span>string <var>$key</var> = <span class="php-quote">''</span> </span> )</code>
+
+		<div class="description short">
+			<p>Deletes a given option</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Deletes a given option</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="wp_get_option" id="_wp_get_option">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed|
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_wp_get_option">#</a>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#166-176" title="Go to source code">wp_get_option</a>( <span>string <var>$key</var> = <span class="php-quote">''</span></span>, <span>boolean <var>$default</var> = <span class="php-keyword1">false</span> </span> )</code>
+
+		<div class="description short">
+			<p>Gets An Option From DB</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets An Option From DB</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+					<dt><var>$default</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed|
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="wp_set_transient" id="_wp_set_transient">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_wp_set_transient">#</a>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#178-189" title="Go to source code">wp_set_transient</a>( <span> <var>$transient</var></span>, <span> <var>$value</var></span>, <span>integer <var>$expiration</var> = <span class="php-num">0</span> </span> )</code>
+
+		<div class="description short">
+			<p>Sets an transient using Transient API In WP</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets an transient using Transient API In WP</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$transient</var></dt>
+					<dd></dd>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+					<dt><var>$expiration</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="wp_get_transient" id="_wp_get_transient">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_wp_get_transient">#</a>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#191-200" title="Go to source code">wp_get_transient</a>( <span> <var>$transient</var></span> )</code>
+
+		<div class="description short">
+			<p>Gets an transient using Transient API In WP</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets an transient using Transient API In WP</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$transient</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="wp_delete_transient" id="_wp_delete_transient">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_wp_delete_transient">#</a>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#202-211" title="Go to source code">wp_delete_transient</a>( <span> <var>$transient</var></span> )</code>
+
+		<div class="description short">
+			<p>Deletes an transient using Transient API In WP</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Deletes an transient using Transient API In WP</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$transient</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_version_key" id="_get_version_key">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_version_key">#</a>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#213-222" title="Go to source code">get_version_key</a>( <span>string <var>$key</var> = <span class="php-quote">''</span> </span> )</code>
+
+		<div class="description short">
+			<p>Returns Version Key.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns Version Key.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_version" id="_validate_version">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean|mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_version">#</a>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#224-239" title="Go to source code">validate_version</a>( <span> <var>$value</var></span>, <span>string <var>$type</var> = <span class="php-quote">''</span> </span> )</code>
+
+		<div class="description short">
+			<p>Validates If Saved Version is same as in the class version.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Validates If Saved Version is same as in the class version.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+					<dt><var>$type</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean|mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="instance" id="_instance">
 
 		<td class="attributes"><code>
@@ -138,16 +730,23 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_instance">#</a>
-		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#315-326" title="Go to source code">instance</a>( )</code>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#241-254" title="Go to source code">instance</a>( <span>boolean <var>$key</var> = <span class="php-keyword1">false</span></span>, <span>array <var>$args</var> = <span class="php-keyword1">array</span>() </span> )</code>
 
 		<div class="description short">
-			<p>Creates &amp; Returns A Static Instance.</p>
+			
 		</div>
 
 		<div class="description detailed hidden">
-			<p>Creates &amp; Returns A Static Instance.</p>
+			
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+					<dt><var>$args</var></dt>
+					<dd></dd>
+				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
@@ -172,7 +771,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_force_set">#</a>
-		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#328-341" title="Go to source code">force_set</a>( <span>string <var>$key</var> = <span class="php-quote">''</span></span>, <span>string <var>$value</var> = <span class="php-quote">''</span></span>, <span>string <var>$expiry</var> = <span class="php-quote">''</span> </span> )</code>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#256-269" title="Go to source code">force_set</a>( <span>string <var>$key</var> = <span class="php-quote">''</span></span>, <span>string <var>$value</var> = <span class="php-quote">''</span></span>, <span>string <var>$expiry</var> = <span class="php-quote">''</span> </span> )</code>
 
 		<div class="description short">
 			
@@ -215,7 +814,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_update_option">#</a>
-		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#343-356" title="Go to source code">update_option</a>( <span> <var>$key</var></span>, <span> <var>$value</var></span>, <span>string <var>$status</var> = <span class="php-quote">''</span> </span> )</code>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#271-284" title="Go to source code">update_option</a>( <span> <var>$key</var></span>, <span> <var>$value</var></span>, <span>string <var>$status</var> = <span class="php-quote">''</span> </span> )</code>
 
 		<div class="description short">
 			
@@ -251,14 +850,14 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			boolean
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_delete_transient">#</a>
-		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#358-366" title="Go to source code">delete_transient</a>( <span> <var>$_key</var></span> )</code>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#286-298" title="Go to source code">delete_transient</a>( <span> <var>$_key</var></span> )</code>
 
 		<div class="description short">
 			
@@ -274,6 +873,10 @@
 					<dd></dd>
 				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
 
 
 
@@ -293,7 +896,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_set_transient">#</a>
-		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#368-381" title="Go to source code">set_transient</a>( <span> <var>$_key</var></span>, <span> <var>$value</var></span>, <span>integer <var>$expiry</var> = <span class="php-num">0</span> </span> )</code>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#300-313" title="Go to source code">set_transient</a>( <span> <var>$_key</var></span>, <span> <var>$value</var></span>, <span>integer <var>$expiry</var> = <span class="php-num">0</span> </span> )</code>
 
 		<div class="description short">
 			
@@ -336,7 +939,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_set">#</a>
-		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#383-396" title="Go to source code">set</a>( <span>string <var>$key</var> = <span class="php-quote">''</span></span>, <span>string <var>$value</var> = <span class="php-quote">''</span></span>, <span>string <var>$expiry</var> = <span class="php-quote">''</span> </span> )</code>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#315-324" title="Go to source code">set</a>( <span>string <var>$key</var> = <span class="php-quote">''</span></span>, <span>string <var>$value</var> = <span class="php-quote">''</span></span>, <span>string <var>$expiry</var> = <span class="php-quote">''</span> </span> )</code>
 
 		<div class="description short">
 			
@@ -379,7 +982,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_set_option">#</a>
-		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#398-411" title="Go to source code">set_option</a>( <span> <var>$_key</var></span>, <span> <var>$value</var></span>, <span>string <var>$status</var> = <span class="php-quote">''</span> </span> )</code>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#326-339" title="Go to source code">set_option</a>( <span> <var>$_key</var></span>, <span> <var>$value</var></span>, <span>string <var>$status</var> = <span class="php-quote">''</span> </span> )</code>
 
 		<div class="description short">
 			
@@ -422,7 +1025,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get">#</a>
-		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#413-424" title="Go to source code">get</a>( <span>string <var>$key</var> = <span class="php-quote">''</span> </span> )</code>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#341-348" title="Go to source code">get</a>( <span>string <var>$key</var> = <span class="php-quote">''</span> </span> )</code>
 
 		<div class="description short">
 			
@@ -461,7 +1064,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_option">#</a>
-		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#426-441" title="Go to source code">get_option</a>( <span> <var>$_key</var></span> )</code>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#350-364" title="Go to source code">get_option</a>( <span> <var>$_key</var></span> )</code>
 
 		<div class="description short">
 			
@@ -500,7 +1103,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_transient">#</a>
-		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#443-457" title="Go to source code">get_transient</a>( <span> <var>$_key</var></span> )</code>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#366-380" title="Go to source code">get_transient</a>( <span> <var>$_key</var></span> )</code>
 
 		<div class="description short">
 			
@@ -532,14 +1135,14 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			boolean|
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_delete">#</a>
-		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#459-467" title="Go to source code">delete</a>( <span> <var>$key</var></span> )</code>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#382-389" title="Go to source code">delete</a>( <span> <var>$key</var></span> )</code>
 
 		<div class="description short">
 			
@@ -555,6 +1158,10 @@
 					<dd></dd>
 				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					boolean|
+				</div>
 
 
 
@@ -567,14 +1174,14 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			boolean
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_delete_option">#</a>
-		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#469-477" title="Go to source code">delete_option</a>( <span> <var>$_key</var></span> )</code>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#391-403" title="Go to source code">delete_option</a>( <span> <var>$_key</var></span> )</code>
 
 		<div class="description short">
 			
@@ -590,6 +1197,10 @@
 					<dd></dd>
 				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
 
 
 
@@ -609,7 +1220,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_update">#</a>
-		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#479-491" title="Go to source code">update</a>( <span> <var>$key</var></span>, <span>string <var>$value</var> = <span class="php-quote">''</span></span>, <span>string <var>$expiry</var> = <span class="php-quote">''</span> </span> )</code>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#405-414" title="Go to source code">update</a>( <span> <var>$key</var></span>, <span>string <var>$value</var> = <span class="php-quote">''</span></span>, <span>string <var>$expiry</var> = <span class="php-quote">''</span> </span> )</code>
 
 		<div class="description short">
 			
@@ -645,14 +1256,14 @@
 		<td class="attributes"><code>
 			 protected 
 
-			mixed
+			boolean
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_delete_version_issue">#</a>
-		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#493-510" title="Go to source code">delete_version_issue</a>( <span> <var>$key</var></span>, <span>string <var>$type</var> = <span class="php-quote">''</span> </span> )</code>
+		<code><a href="source-class-Varunsridharan.WordPress.Transient_Api.html#416-433" title="Go to source code">delete_version_issue</a>( <span> <var>$key</var></span>, <span>string <var>$type</var> = <span class="php-quote">''</span> </span> )</code>
 
 		<div class="description short">
 			<p>Deletes if cache has any issues.</p>
@@ -672,7 +1283,7 @@
 
 				<h4>Returns</h4>
 				<div class="list">
-					mixed
+					boolean
 				</div>
 
 
@@ -683,26 +1294,6 @@
 	</tr>
 	</table>
 
-	<table class="summary inherited">
-	<caption>Methods inherited from <a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#methods">Varunsridharan\WordPress\Transient_WP_Api</a></caption>
-	<tr>
-		<td><code>
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#_check_length">check_length()</a>, 
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#_get_key">get_key()</a>, 
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#_get_version_key">get_version_key()</a>, 
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#_key">key()</a>, 
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#_validate_length">validate_length()</a>, 
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#_validate_version">validate_version()</a>, 
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#_wp_add_option">wp_add_option()</a>, 
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#_wp_delete_option">wp_delete_option()</a>, 
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#_wp_delete_transient">wp_delete_transient()</a>, 
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#_wp_get_option">wp_get_option()</a>, 
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#_wp_get_transient">wp_get_transient()</a>, 
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#_wp_set_transient">wp_set_transient()</a>, 
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#_wp_update_option">wp_update_option()</a>
-		</code></td>
-	</tr>
-	</table>
 
 
 
@@ -723,7 +1314,7 @@
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Varunsridharan.WordPress.Transient_Api.html#308-313" title="Go to source code"><var>$_instances</var></a>
+				<a href="source-class-Varunsridharan.WordPress.Transient_Api.html#26-31" title="Go to source code"><var>$_instances</var></a>
 
 			<div class="description short">
 				<p>_instances</p>
@@ -741,26 +1332,33 @@
 			</div>
 		</td>
 	</tr>
-	</table>
-
-	<table class="summary inherited">
-	<caption>Properties inherited from <a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#properties">Varunsridharan\WordPress\Transient_WP_Api</a></caption>
-	<tr>
-		<td><code>
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#$is_option"><var>$is_option</var></a>, 
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#$option_auto_delete"><var>$option_auto_delete</var></a>, 
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#$option_limit"><var>$option_limit</var></a>, 
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#$option_prefix"><var>$option_prefix</var></a>, 
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#$option_surfix"><var>$option_surfix</var></a>, 
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#$option_version"><var>$option_version</var></a>, 
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#$transient_auto_delete"><var>$transient_auto_delete</var></a>, 
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#$transient_limit"><var>$transient_limit</var></a>, 
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#$transient_prefix"><var>$transient_prefix</var></a>, 
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#$transient_surfix"><var>$transient_surfix</var></a>, 
-			<a href="class-Varunsridharan.WordPress.Transient_WP_Api.html#$transient_version"><var>$transient_version</var></a>
+	<tr data-order="options" id="$options">
+		<td class="attributes"><code>
+			protected  
+			array
 		</code></td>
+
+		<td class="name">
+				<a href="source-class-Varunsridharan.WordPress.Transient_Api.html#33-39" title="Go to source code"><var>$options</var></a>
+
+			<div class="description short">
+				<p>Stores All Options.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Stores All Options.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$options" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>()</code>
+			</div>
+		</td>
 	</tr>
 	</table>
+
 
 
 
@@ -773,7 +1371,7 @@
 	</div>
 </div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?58699d70ee1015ed63e509c64f4dd9d3b29ddbbe"></script>
+<script src="elementlist.js?f359fe75b02fb5ef202caa710468485edc9b3d50"></script>
 </body>
 </html>
