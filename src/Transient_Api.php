@@ -10,10 +10,6 @@
 
 namespace Varunsridharan\WordPress;
 
-if ( ! defined( 'WPINC' ) ) {
-	die;
-}
-
 if ( ! class_exists( '\Varunsridharan\WordPress\Transient_Api' ) ) {
 	/**
 	 * Class Transient_WP_Api
@@ -34,7 +30,6 @@ if ( ! class_exists( '\Varunsridharan\WordPress\Transient_Api' ) ) {
 		 * Stores All Options.
 		 *
 		 * @var array
-		 * @access
 		 */
 		protected $options = array();
 
